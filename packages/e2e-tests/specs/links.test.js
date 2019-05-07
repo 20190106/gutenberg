@@ -240,7 +240,7 @@ describe( 'Links', () => {
 		await page.keyboard.press( 'ArrowRight' );
 		// Press escape to show the block toolbar
 		await page.keyboard.press( 'Escape' );
-		await page.click( 'button[aria-label="Edit"]' );
+		await expect( page ).toClick( 'button[aria-label="Edit"]' );
 		await waitForAutoFocus();
 		await page.keyboard.type( '/handbook' );
 		await page.click( 'button[aria-label="Apply"]' );
